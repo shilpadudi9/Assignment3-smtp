@@ -11,7 +11,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Fill in start
     clientSocket = socket(AF_INET, SOCK_STREAM)     #Creating Socket and speciying TCP Connection & IPv4
-    clientSocket.connect(mailserver,port)           #Initiating a TCP Connectino between Client and Mail Server
+    clientSocket.connect((mailserver,port))           #Initiating a TCP Connectino between Client and Mail Server
     # Fill in end
 
     recv = clientSocket.recv(1024).decode()
